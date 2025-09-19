@@ -14,8 +14,7 @@ It is a simplified e-commerce system that handles:
 - **Java 21+**
 - **Spring Boot 3.5**
   - Spring Web (REST API)
-  - Spring Data JPA (Hibernate, HikariCP)
-  - Bean Validation (JSR-380)
+  - Spring Data JPA
 - **H2 Database** (in-memory database for testing/demo)
 - **Lombok** (to reduce boilerplate)
 - **ULID** (unique identifiers for orders)
