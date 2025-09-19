@@ -24,19 +24,19 @@ class CustomerIntegrationTest {
                    "companyName": "ACME Sp. z o.o.",
                    "taxId": "PL1234567890",
                    "email": "office@acme.pl",
-                                "phone": "+48221234567",
-                                "billingAddress": {
-                                  "line1": "ul. Firmowa 10",
-                                  "city": "Kraków",
-                                  "zip": "30-001",
-                                  "country": "PL"
-                                },
-                                "shippingAddress": {
-                                  "line1": "ul. Magazynowa 22",
-                                  "city": "Kraków",
-                                  "zip": "30-002",
-                                  "country": "PL"
-                                }
+                   "phone": "+48221234567",
+                   "billingAddress": {
+                      "line1": "ul. Firmowa 10",
+                      "city": "Kraków",
+                      "zip": "30-001",
+                      "country": "PL"
+                      },
+                   "shippingAddress": {
+                     "line1": "ul. Magazynowa 22",
+                     "city": "Kraków",
+                     "zip": "30-002",
+                     "country": "PL"
+                     }
 
                 }
                 """;

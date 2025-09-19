@@ -9,6 +9,7 @@ import com.example.e_commerce.model.customer.Customer;
 import com.example.e_commerce.repo.CustomerRepo;
 import com.example.e_commerce.service.ICustomerService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class CustomerServiceImpl implements ICustomerService {
@@ -21,6 +22,7 @@ public class CustomerServiceImpl implements ICustomerService {
     }
 
     @Override
+    @Transactional
     public Customer create(CustomerCreateDto dto) {
         if (repo.existsByEmail(dto.email())) {
             throw new EmailAlreadyExistException("Email already exists: " + dto.email());

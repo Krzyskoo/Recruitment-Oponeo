@@ -14,6 +14,7 @@ import com.example.e_commerce.repo.OrderRepo;
 import com.example.e_commerce.repo.ProductRepo;
 import com.example.e_commerce.service.IOrderService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 
@@ -35,6 +36,7 @@ public class OrderServiceImpl implements IOrderService {
     }
 
     @Override
+    @Transactional
     public Order create(OrderCreateDto dto) {
         Customer customer = customerRepo.findById(dto.customerId())
                 .orElseThrow(() -> new CustomerNotFoundException("Customer not found"));
