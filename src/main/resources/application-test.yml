@@ -1,0 +1,25 @@
+server:
+  port: 0
+
+spring:
+  main:
+    web-application-type: servlet   # wymuś tryb MVC (bo webflux jest tylko w testach)
+
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop         # <-- kluczowe
+    properties:
+      hibernate.jdbc.time_zone: UTC
+    open-in-view: false             # uczciwe ładowanie relacji
+
+logging:
+  level:
+    org.springframework.web: WARN
+
+
